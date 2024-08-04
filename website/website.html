@@ -1,0 +1,79 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Akhsay coding</title>
+        <link rel="stylesheet" href="style.css">
+            </head>
+            <body>
+                <div class="Full-page">
+                    <div class="navbar">
+                    <div>
+                        <a href="website.html">Akshay coding</a>
+                    </div>
+                    <nav>
+                        <ul id="MenuItem">
+                            <li><a href="home.html">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">contact</a></li>
+                            <li><button class="loginbtn" onclick="document.getElementById('login-form').style.display='block'">Login</button>
+                            </li>
+                        </ul>
+                    </nav>
+             </div>
+                    <div id="login-form" class="login-page">
+                        <div class="form-box">
+                            <div class="button-box">
+                                    <div id="btn"></div>
+                                    <button type="button"onclick="login()"class="toggle-btn">Log in</button>
+                                    <button type="button"onclick="register()"class="toggle-btn">Register</button>
+                                    </div>
+                                    <form id="login" class="input-group-login">
+                                        <input type="text" class="input-field" placeholder="Username" required>
+                                        <input type="password"class="input-field" placeholder="Enter Password" required>
+                                        <input type="checkbox"class="check-box"><span>Remember password</span>
+                                        <button type="submit" class="submit-btn">Login</button>                                     
+                                        </form>
+                                        <form id="register" class="input-group-register">
+                                            <input type="text" class="input-field" placeholder="First Name" required>
+                                            <input type="text" class="input-field" placeholder="Last Name" required>
+                                            <input type="text" class="input-field" placeholder="Username" required>
+                                            <input type="password" class="input-field" placeholder="Enter Password" required>
+                                            <input type="password" class="input-field" placeholder="Confirm Password" required>
+                                            <input type="checkbox" class="check-box"><span>I agree to all condition</span>
+                                            <button type="submit" class="submit-btn">Register</button>
+                                            </form>
+                                        </div>
+                                </div>
+                        </div>
+                    <script>
+                        var x=document.getElementById('login');
+                        var y=document.getElementById('register');
+                        var z=document.getElementById('btn');
+                        function register()
+                        {
+                            x.style.left='-400px';
+                            y.style.left='50px';
+                            z.style.left='110px';
+
+                        }
+                        function login()
+                        {
+                            x.style.left='50px';
+                            y.style.left='450px';
+                            z.style.left='0px';
+
+                        }
+                    </script>
+                    <script>
+                        var modal = document.getElementById('login-form');
+                        window.onclick = function(event)
+                        {
+                            if(event.target == modal)
+                            {
+                                modal.style.display = "none";
+                            }
+                        }
+
+                        </Script>
+         </body>
+</html> 
